@@ -13,6 +13,7 @@ import checkArgumentType from './check-argument-type';
 import createDate from './create-date';
 
 import decycle from './decycle';
+import deepEqual from './deep-equal';
 import dequote from './dequote';
 
 import emptyToNull from './empty-to-null';
@@ -100,6 +101,7 @@ export {
   createDate,
 
   decycle,
+  deepEqual,
   dequote,
 
   emptyToNull,

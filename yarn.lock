@@ -2397,10 +2397,10 @@ __metadata:
     vue: "npm:^3.5.21"
     vue-template-compiler: "npm:^2.7.16"
   peerDependencies:
-    "@babel/runtime": ^7.26.0
-    "@qubit-ltd/json": ^1.2.1
-    "@qubit-ltd/type-detect": ^2.2.0
-    "@qubit-ltd/typeinfo": ^3.3.0
+    "@babel/runtime": ^7.28.4
+    "@qubit-ltd/json": ^1.2.4
+    "@qubit-ltd/type-detect": ^2.2.3
+    "@qubit-ltd/typeinfo": ^3.3.4
   languageName: unknown
   linkType: soft
 

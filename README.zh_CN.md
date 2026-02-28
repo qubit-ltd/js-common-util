@@ -131,6 +131,7 @@ const json = jsonStringify(obj);  // 处理循环引用
 - `stringToMoney`: 将字符串格式化为货币形式
 - `emptyToNull`: 将空值转换为 null
 - `restoreVueManaged`: 将 Vue 托管的对象转换回原生对象
+- `deepEqual`: 对两个值进行深度相等比较，支持 ES6 类型以及递归循环引用
 
 ## <span id="贡献">贡献</span>
 

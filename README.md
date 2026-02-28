@@ -131,6 +131,7 @@ const json = jsonStringify(obj);  // Handles circular references
 - `stringToMoney`: Formats a string as money
 - `emptyToNull`: Converts empty values to null
 - `restoreVueManaged`: Converts Vue-managed objects back to native objects
+- `deepEqual`: Performs a deep equality comparison between two values, supporting ES6 types and circular references
 
 ## <span id="contributing">Contributing</span>
 
