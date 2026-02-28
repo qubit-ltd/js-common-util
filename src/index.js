@@ -54,7 +54,7 @@ import loadScript from './load-script';
 import normalizeUrl from './normalize-url';
 
 import redirect from './redirect';
-import removeClassFromHmlElement from './remove-class-from-html-element';
+import { removeClassFromHtmlElement, removeClassFromHmlElement } from './remove-class-from-html-element';
 import removeSearchParam from './remove-search-param';
 import restoreVueManaged from './restore-vue-managed';
 import round from './round';
@@ -142,6 +142,7 @@ export {
   normalizeUrl,
 
   redirect,
+  removeClassFromHtmlElement,
   removeClassFromHmlElement,
   removeSearchParam,
   restoreVueManaged,

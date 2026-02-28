@@ -62,4 +62,23 @@ function removeClassFromHtmlElement(el, cls) {
   }
 }
 
+/**
+ * 从指定的HTML元素的类列表中删除指定的CSS类。
+ *
+ * @param {HTMLElement} el
+ *     指定的HTML元素对象。
+ * @param {String} cls
+ *     待删除的CSS类名；可以是多个类名，用空格隔开。
+ * @deprecated 请使用 `removeClassFromHtmlElement`。
+ * @author 胡海星
+ */
+function removeClassFromHmlElement(el, cls) {
+  removeClassFromHtmlElement(el, cls);
+}
+
+export {
+  removeClassFromHtmlElement,
+  removeClassFromHmlElement,
+};
+
 export default removeClassFromHtmlElement;
