@@ -18,26 +18,48 @@ import isHtmlElementHasClass from './is-html-element-has-class';
  *     separated by spaces.
  * @author Haixing Hu
  */
-function addClassToHmlElement(el, cls) {
-  if (!el) {
+function addClassToHtmlElement(el, cls) {
+  if (!el || !cls) {
     return;
   }
-  const classes = (cls || '').split(' ');
-  let currentClass = el.className;
-  for (let i = 0; i < classes.length; ++i) {
-    const clsName = classes[i];
-    if (!clsName) {
-      continue;
+  const classes = cls.split(/\s+/);
+  if (el.classList) {
+    for (let i = 0; i < classes.length; ++i) {
+      const clsName = classes[i];
+      if (clsName) {
+        el.classList.add(clsName);
+      }
     }
-    if (el.classList) {
-      el.classList.add(clsName);
-    } else if (!isHtmlElementHasClass(el, clsName)) {
-      currentClass += ` ${clsName}`;
+  } else {
+    let currentClass = el.className || '';
+    for (let i = 0; i < classes.length; ++i) {
+      const clsName = classes[i];
+      if (clsName && !isHtmlElementHasClass(el, clsName)) {
+        currentClass += (currentClass ? ' ' : '') + clsName;
+      }
     }
-  }
-  if (!el.classList) {
-    el.setAttribute('class', currentClass);
+    el.className = currentClass;
   }
 }
 
-export default addClassToHmlElement;
+/**
+ * Adds CSS classes to the specified HTML element.
+ *
+ * @param {HTMLElement} el
+ *     The specified HTML element object.
+ * @param {String} cls
+ *     The name of the CSS class to be added; it can be multiple class names,
+ *     separated by spaces.
+ * @deprecated Use `addClassToHtmlElement` instead.
+ * @author Haixing Hu
+ */
+function addClassToHmlElement(el, cls) {
+  addClassToHtmlElement(el, cls);
+}
+
+export {
+  addClassToHtmlElement,
+  addClassToHmlElement,
+};
+
+export default addClassToHtmlElement;

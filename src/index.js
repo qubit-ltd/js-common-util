@@ -6,7 +6,7 @@
 //    All rights reserved.
 //
 ////////////////////////////////////////////////////////////////////////////////
-import addClassToHmlElement from './add-class-to-html-element';
+import { addClassToHtmlElement, addClassToHmlElement } from './add-class-to-html-element';
 import addSearchParams from './add-search-params';
 
 import checkArgumentType from './check-argument-type';
@@ -94,6 +94,7 @@ import isSafari from './is-safari';
 import rafThrottle from './raf-throttle';
 
 export {
+  addClassToHtmlElement,
   addClassToHmlElement,
   addSearchParams,
 

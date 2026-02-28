@@ -6,7 +6,7 @@
 //    All rights reserved.
 //
 ////////////////////////////////////////////////////////////////////////////////
-import addClassToHtmlElement from '../src/add-class-to-html-element';
+import { addClassToHtmlElement } from '../src/add-class-to-html-element';
 
 /**
  * 测试 addClassToHtmlElement() 函数
@@ -77,7 +77,7 @@ describe('addClassToHtmlElement', () => {
     });
 
     addClassToHtmlElement(element, 'test-class');
-    expect(element.getAttribute('class')).toBe(' test-class');
+    expect(element.className).toBe('test-class');
   });
 
   test('当元素没有classList属性且已有类名时应正确添加新类', () => {
