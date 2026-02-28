@@ -94,8 +94,8 @@ const json = jsonStringify(obj);  // 处理循环引用
 
 ### <span id="dom-操作">DOM 操作</span>
 
-- `addClassToHmlElement`: 为 HTML 元素添加 CSS 类
-- `removeClassFromHmlElement`: 从 HTML 元素中移除 CSS 类
+- `addClassToHtmlElement`: 向一个HTML元素添加CSS类
+- `removeClassFromHtmlElement`: 从一个HTML元素中删除CSS类
 - `isHtmlElement`: 检查值是否为 HTML 元素
 - `isHtmlElementHasClass`: 检查 HTML 元素是否有特定类
 - `fixScroll`: 修复移动设备上的滚动问题

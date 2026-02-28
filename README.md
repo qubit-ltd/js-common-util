@@ -94,8 +94,8 @@ const json = jsonStringify(obj);  // Handles circular references
 
 ### <span id="dom-manipulation">DOM Manipulation</span>
 
-- `addClassToHmlElement`: Adds a CSS class to an HTML element
-- `removeClassFromHmlElement`: Removes a CSS class from an HTML element
+- `addClassToHtmlElement`: Adds a CSS class to an HTML element
+- `removeClassFromHtmlElement`: Removes a CSS class from an HTML element
 - `isHtmlElement`: Checks if a value is an HTML element
 - `isHtmlElementHasClass`: Checks if an HTML element has a specific class
 - `fixScroll`: Fixes scroll issues on mobile devices
