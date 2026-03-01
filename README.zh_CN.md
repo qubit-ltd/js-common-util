@@ -3,8 +3,8 @@
 [![npm 包](https://img.shields.io/npm/v/@qubit-ltd/common-util.svg)](https://npmjs.com/package/@qubit-ltd/common-util)
 [![许可证](https://img.shields.io/badge/License-Apache-blue.svg)](https://www.apache.org/licenses/LICENSE-2.0)
 [![English doc](https://img.shields.io/badge/document-English-blue.svg)](README.md)
-[![CircleCI](https://dl.circleci.com/status-badge/img/gh/Haixing-Hu/js-common-util/tree/master.svg?style=shield)](https://dl.circleci.com/status-badge/redirect/gh/Haixing-Hu/js-common-util/tree/master)
-[![覆盖率状态](https://coveralls.io/repos/github/Haixing-Hu/js-common-util/badge.svg?branch=master)](https://coveralls.io/github/Haixing-Hu/js-common-util?branch=master)
+[![CircleCI](https://dl.circleci.com/status-badge/img/gh/qubit-ltd/js-common-util/tree/master.svg?style=shield)](https://dl.circleci.com/status-badge/redirect/gh/qubit-ltd/js-common-util/tree/master)
+[![覆盖率状态](https://coveralls.io/repos/github/qubit-ltd/js-common-util/badge.svg?branch=master)](https://coveralls.io/github/qubit-ltd/js-common-util?branch=master)
 
 [@qubit-ltd/common-util] 是一个 JavaScript ES6 通用工具函数库，可简化日常开发任务。这个库提供了一系列全面的辅助函数，用于字符串操作、对象属性访问、数据类型检查、浏览器检测、DOM 操作等多种功能。
 
@@ -143,4 +143,4 @@ const json = jsonStringify(obj);  // 处理循环引用
 有关更多详细信息，请参阅 [LICENSE](LICENSE) 文件。
 
 [@qubit-ltd/common-util]: https://npmjs.com/package/@qubit-ltd/common-util
-[GitHub 仓库]: https://github.com/Haixing-Hu/js-common-util 
+[GitHub 仓库]: https://github.com/qubit-ltd/js-common-util 

@@ -3,8 +3,8 @@
 [![npm package](https://img.shields.io/npm/v/@qubit-ltd/common-util.svg)](https://npmjs.com/package/@qubit-ltd/common-util)
 [![License](https://img.shields.io/badge/License-Apache-blue.svg)](https://www.apache.org/licenses/LICENSE-2.0)
 [![中文文档](https://img.shields.io/badge/文档-中文版-blue.svg)](README.zh_CN.md)
-[![CircleCI](https://dl.circleci.com/status-badge/img/gh/Haixing-Hu/js-common-util/tree/master.svg?style=shield)](https://dl.circleci.com/status-badge/redirect/gh/Haixing-Hu/js-common-util/tree/master)
-[![Coverage Status](https://coveralls.io/repos/github/Haixing-Hu/js-common-util/badge.svg?branch=master)](https://coveralls.io/github/Haixing-Hu/js-common-util?branch=master)
+[![CircleCI](https://dl.circleci.com/status-badge/img/gh/qubit-ltd/js-common-util/tree/master.svg?style=shield)](https://dl.circleci.com/status-badge/redirect/gh/qubit-ltd/js-common-util/tree/master)
+[![Coverage Status](https://coveralls.io/repos/github/qubit-ltd/js-common-util/badge.svg?branch=master)](https://coveralls.io/github/qubit-ltd/js-common-util?branch=master)
 
 [@qubit-ltd/common-util] is a JavaScript ES6 library of common utility functions that simplifies everyday development tasks. This library provides a comprehensive collection of helper functions for string manipulation, object property access, data type checking, browser detection, DOM manipulation, and more.
 
@@ -144,4 +144,4 @@ to open an issue or submit a pull request to the [GitHub repository].
 See the [LICENSE](LICENSE) file for more details.
 
 [@qubit-ltd/common-util]: https://npmjs.com/package/@qubit-ltd/common-util
-[GitHub repository]: https://github.com/Haixing-Hu/js-common-util
+[GitHub repository]: https://github.com/qubit-ltd/js-common-util
