@@ -27,7 +27,7 @@ function getHash(url) {
   } else if (!(url instanceof URL)) {
     try {
       url = new URL(url);
-    } catch (e) {
+    } catch (_e) {
       // 如果URL无效，回退到window.location
       url = window.location;
     }

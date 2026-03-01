@@ -677,7 +677,7 @@ function stringifyUrl(object, options = {}) {
       hash = options[encodeFragmentIdentifier]
         ? urlObjectForFragmentEncode.hash
         : `#${object.fragmentIdentifier}`;
-    } catch (error) {
+    } catch (_error) {
       // 如果URL构造失败，使用简单方法
       hash = options[encodeFragmentIdentifier]
         ? `#${encodeURIComponent(object.fragmentIdentifier)}`

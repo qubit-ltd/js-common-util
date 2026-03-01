@@ -7,24 +7,6 @@
 //
 ////////////////////////////////////////////////////////////////////////////////
 
-/**
- * Performs a deep equality comparison between two values.
- *
- * This implementation supports ES6 Map, Set, and Typed arrays, is circular
- * reference safe, and is highly optimized.
- *
- * @param {any} a
- *     The first value to compare.
- * @param {any} b
- *     The second value to compare.
- * @return {boolean}
- *     `true` if the values are deeply equal, `false` otherwise.
- * @author Haixing Hu
- */
-function deepEqual(a, b) {
-  return deepEqualRecursive(a, b, new Map());
-}
-
 function deepEqualRecursive(a, b, seen) {
   if (a === b) {
     return true;
@@ -137,7 +119,26 @@ function deepEqualRecursive(a, b, seen) {
   }
 
   // true if both NaN, false otherwise
+  // eslint-disable-next-line no-self-compare
   return a !== a && b !== b;
+}
+
+/**
+ * Performs a deep equality comparison between two values.
+ *
+ * This implementation supports ES6 Map, Set, and Typed arrays, is circular
+ * reference safe, and is highly optimized.
+ *
+ * @param {any} a
+ *     The first value to compare.
+ * @param {any} b
+ *     The second value to compare.
+ * @return {boolean}
+ *     `true` if the values are deeply equal, `false` otherwise.
+ * @author Haixing Hu
+ */
+function deepEqual(a, b) {
+  return deepEqualRecursive(a, b, new Map());
 }
 
 export default deepEqual;
