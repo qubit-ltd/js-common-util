@@ -716,7 +716,7 @@ describe('queryString', () => {
     test('index 格式中数组包含 null 值', () => {
       const stringified = queryString.stringify(
         { foo: ['bar', null, 'baz'] },
-        { arrayFormat: 'index' }
+        { arrayFormat: 'index' },
       );
       expect(stringified).toContain('foo[0]=bar');
       expect(stringified).toContain('foo[1]');
@@ -726,7 +726,7 @@ describe('queryString', () => {
     test('index 格式中数组包含 undefined 值（应跳过）', () => {
       const stringified = queryString.stringify(
         { foo: ['bar', undefined, 'baz'] },
-        { arrayFormat: 'index' }
+        { arrayFormat: 'index' },
       );
       expect(stringified).toContain('foo[0]=bar');
       expect(stringified).toContain('foo[1]=baz');
@@ -736,7 +736,7 @@ describe('queryString', () => {
     test('bracket 格式中数组包含 null 值', () => {
       const stringified = queryString.stringify(
         { foo: ['bar', null, 'baz'] },
-        { arrayFormat: 'bracket' }
+        { arrayFormat: 'bracket' },
       );
       expect(stringified).toContain('foo[]=bar');
       expect(stringified).toContain('foo[]');
@@ -746,7 +746,7 @@ describe('queryString', () => {
     test('bracket 格式中数组包含 undefined 值（应跳过）', () => {
       const stringified = queryString.stringify(
         { foo: ['bar', undefined, 'baz'] },
-        { arrayFormat: 'bracket' }
+        { arrayFormat: 'bracket' },
       );
       expect(stringified).toContain('foo[]=bar');
       expect(stringified).toContain('foo[]=baz');
@@ -756,7 +756,7 @@ describe('queryString', () => {
     test('colon-list-separator 格式中数组包含 null 值', () => {
       const stringified = queryString.stringify(
         { foo: ['bar', null, 'baz'] },
-        { arrayFormat: 'colon-list-separator' }
+        { arrayFormat: 'colon-list-separator' },
       );
       expect(stringified).toContain('foo:list=bar');
       expect(stringified).toContain('foo:list=');
@@ -766,7 +766,7 @@ describe('queryString', () => {
     test('colon-list-separator 格式中数组包含 undefined 值（应跳过）', () => {
       const stringified = queryString.stringify(
         { foo: ['bar', undefined, 'baz'] },
-        { arrayFormat: 'colon-list-separator' }
+        { arrayFormat: 'colon-list-separator' },
       );
       expect(stringified).toContain('foo:list=bar');
       expect(stringified).toContain('foo:list=baz');
@@ -776,7 +776,7 @@ describe('queryString', () => {
     test('separator 格式中数组包含 undefined 值（应跳过）', () => {
       const stringified = queryString.stringify(
         { foo: ['bar', undefined, 'baz'] },
-        { arrayFormat: 'separator', arrayFormatSeparator: ',' }
+        { arrayFormat: 'separator', arrayFormatSeparator: ',' },
       );
       expect(stringified).toBe('foo=bar,baz');
     });
@@ -784,7 +784,7 @@ describe('queryString', () => {
     test('separator 格式中数组包含空字符串（skipEmptyString=true）', () => {
       const stringified = queryString.stringify(
         { foo: ['bar', '', 'baz'] },
-        { arrayFormat: 'separator', arrayFormatSeparator: ',', skipEmptyString: true }
+        { arrayFormat: 'separator', arrayFormatSeparator: ',', skipEmptyString: true },
       );
       expect(stringified).toBe('foo=bar,baz');
     });
@@ -815,7 +815,7 @@ describe('queryString', () => {
       const parsed = queryString.parse('foo=1,2', {
         arrayFormat: 'separator',
         arrayFormatSeparator: ',',
-        parseNumbers: true
+        parseNumbers: true,
       });
       expect(parsed.foo).toEqual([1, 2]);
     });
@@ -823,7 +823,7 @@ describe('queryString', () => {
     test('bracket-separator 格式解析不带方括号的键', () => {
       const parsed = queryString.parse('foo=bar', {
         arrayFormat: 'bracket-separator',
-        arrayFormatSeparator: ','
+        arrayFormatSeparator: ',',
       });
       expect(parsed.foo).toBe('bar');
     });
@@ -831,7 +831,7 @@ describe('queryString', () => {
     test('bracket-separator 格式解析带方括号但值为空', () => {
       const parsed = queryString.parse('foo[]=', {
         arrayFormat: 'bracket-separator',
-        arrayFormatSeparator: ','
+        arrayFormatSeparator: ',',
       });
       // 空字符串会被split成一个包含空字符串的数组
       expect(parsed.foo).toEqual(['']);
@@ -854,7 +854,7 @@ describe('queryString', () => {
 
       const parsed = queryString.parse('date=invalid-date', {
         types: {
-          date: (value) => {
+          date: (_value) => {
             throw new Error('Invalid date format');
           },
         },
@@ -887,7 +887,7 @@ describe('queryString', () => {
     test('keysSorter 处理数组', () => {
       const parsed = queryString.parse('foo[2]=c&foo[0]=a&foo[1]=b', {
         arrayFormat: 'index',
-        sort: true
+        sort: true,
       });
       expect(parsed.foo).toEqual(['a', 'b', 'c']);
     });
@@ -895,7 +895,7 @@ describe('queryString', () => {
     test('keysSorter 处理非对象非数组类型', () => {
       const parsed = queryString.parse('foo=bar&baz=qux', {
         sort: true,
-        parseNumbers: false
+        parseNumbers: false,
       });
       expect(parsed.foo).toBe('bar');
       expect(parsed.baz).toBe('qux');
@@ -982,7 +982,7 @@ describe('queryString', () => {
     test('keysSorter 处理简单类型（非对象非数组）', () => {
       // 测试在parse中对简单值进行排序
       const parsed = queryString.parse('a=hello&b=world', {
-        sort: true
+        sort: true,
       });
       // 简单字符串值应该保持不变
       expect(parsed.a).toBe('hello');

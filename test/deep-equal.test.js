@@ -80,7 +80,6 @@ describe('deepEqual', () => {
   test('Sets', () => {
     const s1 = new Set(['a', 1, { b: 2 }]);
     const s2 = new Set(['a', 1, { b: 2 }]);
-    const s3 = new Set(['a', 1, { b: 3 }]);
     expect(deepEqual(s1, s2)).toBe(true);
     // Note: Set equality with objects as values might be tricky if not handled by standard deepEqual
     // My implementation checks if b.has(item), which for objects means referential equality.
@@ -98,6 +97,7 @@ describe('deepEqual', () => {
   test('custom valueOf/toString', () => {
     class Custom {
       constructor(v) { this.v = v; }
+
       valueOf() { return this.v; }
     }
     expect(deepEqual(new Custom(1), new Custom(1))).toBe(true);
