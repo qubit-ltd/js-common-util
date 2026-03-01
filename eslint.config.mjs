@@ -42,6 +42,11 @@ export default [
     },
     rules: {
       'max-classes-per-file': 'off',
+      'no-unused-vars': ['error', {
+        'argsIgnorePattern': '^_',
+        'varsIgnorePattern': '^_',
+        'caughtErrorsIgnorePattern': '^_',
+      }],
     },
   },
 ];
