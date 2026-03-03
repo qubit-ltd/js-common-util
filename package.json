@@ -1,6 +1,6 @@
 {
   "name": "@qubit-ltd/common-util",
-  "version": "5.4.9",
+  "version": "5.4.10",
   "description": "A JavaScript ES6 library of common utility functions",
   "author": "Haixing Hu",
   "license": "Apache-2.0",
@@ -38,7 +38,7 @@
     "lint": "eslint --config eslint.config.mjs ./src ./test",
     "doc": "jsdoc -c jsdoc.json",
     "es5": "check-es-version -e 5 -s true -d ./dist",
-    "deploy": "npm run lint && npm run test && npm run build:all && npm publish --registry='https://registry.npmjs.org/' --access public"
+    "deploy": "npm run lint && npm run test && npm run build:all && npm publish --@qubit-ltd:registry='https://registry.npmjs.org/' --access public"
   },
   "browserify": {
     "transform": [
@@ -47,9 +47,9 @@
   },
   "peerDependencies": {
     "@babel/runtime": "^7.28.5",
-    "@qubit-ltd/json": "^1.2.6",
-    "@qubit-ltd/type-detect": "^2.2.8",
-    "@qubit-ltd/typeinfo": "^3.3.9"
+    "@qubit-ltd/json": "^1.2.7",
+    "@qubit-ltd/type-detect": "^2.2.9",
+    "@qubit-ltd/typeinfo": "^3.3.10"
   },
   "devDependencies": {
     "@babel/core": "^7.28.5",
@@ -58,12 +58,12 @@
     "@babel/preset-env": "^7.28.5",
     "@babel/runtime": "^7.28.5",
     "@jest/core": "^30.1.3",
-    "@qubit-ltd/eslint-config": "^2.0.1",
-    "@qubit-ltd/jsdoc-theme": "^1.5.2",
-    "@qubit-ltd/json": "^1.2.6",
-    "@qubit-ltd/rollup-builder": "^1.8.14",
-    "@qubit-ltd/type-detect": "^2.2.8",
-    "@qubit-ltd/typeinfo": "^3.3.9",
+    "@qubit-ltd/eslint-config": "^2.0.2",
+    "@qubit-ltd/jsdoc-theme": "^1.5.3",
+    "@qubit-ltd/json": "^1.2.7",
+    "@qubit-ltd/rollup-builder": "^1.8.15",
+    "@qubit-ltd/type-detect": "^2.2.9",
+    "@qubit-ltd/typeinfo": "^3.3.10",
     "@rollup/plugin-alias": "^6.0.0",
     "@rollup/plugin-babel": "^6.1.0",
     "@rollup/plugin-commonjs": "^29.0.0",
